@@ -1,0 +1,895 @@
+/*import google fonts link ----*/
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap");
+/*basic rests*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Oswald", sans-serif;
+}
+/*---------- Global ---------*/
+html{
+    box-sizing: border-box;
+}
+
+:root {
+  --green-light: #7fff00;
+}
+
+/*------------ Header -----------*/
+header {
+  position: fixed;
+  z-index: 300;
+  padding:25px 20px;
+
+}
+/*------------ Header side-nav left-----------*/
+header .side-nav {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  background: #222;
+  width: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 70px;
+}
+/*------------ Header side nav join and my fit-club menu button-----------*/
+header .join-my_fit{
+ 
+  text-decoration:none;
+  margin: 0px 20px;
+  font-size:20px;
+ /*------------ Header side nav list items-----------*/ 
+}
+header .side-nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+header .side-nav ul li a {
+  display: block;
+  color: #fff;
+  padding-left: 35px;
+  transition: 0.4;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+
+header .side-nav ul li ul {
+display:none;
+  text-align: left;
+  padding-left:20px;
+}
+
+header .side-nav ul li:hover ul {
+  display:block;
+}
+header .side-nav ul li a:hover,
+header .join-my_fit{
+  color: var(--green-light);
+  background: #1e1e1e;
+  border-left-color: var(--green-light);
+}
+header .side-nav .nav-list ul {
+  display: none;
+}
+header .side-nav .nav-list ul li a {
+  padding-left: 70px;
+}
+/*------------ Header side-nav close button -----------*/
+
+header .side-nav .close-btn {
+  position: absolute;
+  top: 41px;
+  left: 140px;
+  font-size: 38px;
+  margin-left: 50px;
+  color: #fff;
+}
+
+header .side-nav .close-btn span {
+  height: 4px;
+  margin-bottom: 8px;
+  display: block;
+  background-color: #fff;
+  width: 40px;
+}
+
+header .side-nav .close-btn .close-btn_1 {
+  transform: rotate(-45deg) translateX(-9px) translateY(9px);
+}
+
+header .side-nav .close-btn .close-btn_2 {
+  transform: rotate(45deg);
+}
+/*------------ Header main menu, logo and open side nav button  -----------*/
+header #main {
+  display: flex;
+}
+/*-----    Header loge  -----*/
+header #main .logo {
+  position: relative;
+  bottom: 0px;
+  left: 60px;
+}
+header #main .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 600;
+}
+header .logo span {
+  color: var(--green-light);
+}
+
+/*-----    Header open side nav button  ------*/
+
+header #main .open-btn {
+  position: relative;
+  bottom: -16px;
+  left: -120px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0;
+}
+
+header #main .open-btn span {
+  height: 4px;
+  margin-bottom: 11px;
+  background-color: #fff;
+  width: 40px;
+  display: block;
+}
+
+/*-------   Header search and join, my-fit-club button  ------------*/
+header .main-nav_item {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+}
+/*------- Search menu form-------*/
+header .main-nav_item form input[type="text"],
+header .side-nav form input[type="text"]{
+  width: 240px;
+  height: 40px;
+  border: 3px solid #7fff00;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 4px 10px 5px 40px;
+
+}
+/*------- Header menu button-------*/
+header .main-nav_item a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 0px 20px;
+}
+header .main-nav_item a:hover {
+  color: var(--green-light);
+}
+/*------------------ Home (home page text and godown button )---------*/
+.home {
+  background: url("https://www.mensfitnessmagazine.com.au/wp-content/uploads/2018/03/Athlete-running-636887598_1368x769.jpeg");
+  background-repeat: no-repaet;
+  background-size: cover;
+  width: 100wh;
+  height: 600px;
+  box-shadow: inset 0px 0px 40px 30px #000000;
+}
+/*------- Home text -------*/
+.home h1,
+.home h3 {
+  position: relative;
+  z-index: 2;
+  top: 280px;
+  left:50px;
+  font-size: 55px;
+  font-weight: 600;
+  color: #ffffff;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  
+}
+
+.home h1 span,
+.home h3 span {
+  color: var(--green-light);
+}
+
+/*------- Home godown button  -------*/
+.go-down {
+  position: absolute;
+  z-insex: 2;
+  top: 460px;
+  left: 680px;
+  animation: mymove 1s ease-out forwards;
+  animation-iteration-count: 1000;
+  padding: 15px 10px;
+  text-decoration: none;
+  font-size: 40px;
+
+}
+/*------- Home godown button animation keyframes -------*/
+@keyframes mymove {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(20px);
+  }
+}
+.go-down a {
+  text-decoration: none;
+}
+.go-down span {
+  color: #fff;
+}
+
+/*------- Optimize-experience Three-Column-Layout   (My experince section)---*/
+.Optimize {
+  display: flex;
+  flex-direction: row;
+  background: black;
+
+}
+.Optimize .Optimize-experience-1,
+.Optimize .Optimize-experience-2,
+.Optimize .Optimize-experience-3 {
+  flex: 1;
+  margin: 0px 10px;
+
+}
+.Optimize-experience-2 ol li{
+  font-size: 20px;
+}
+.Optimize h2{
+  color:#fff;
+  text-align:center;
+}
+.Optimize p,
+Optimize-experience-2 ol li{
+  font-size: 20px;
+  padding: 5px;
+  margin: 15px;
+  color: #fff;
+  border-radius: 55px;
+}
+.Optimize img {
+  width: 100%;
+  height: 300px;
+}
+.Optimize .Optimize-experience-2 ol{
+  color:#fff;
+  
+  padding: 20px;
+  margin:5px 15px;
+}
+/*------- About-me section  ---*/
+.about-me{
+  display: flex;
+  padding:60px;
+    background: black;
+  
+}
+.about-img{
+  background: url("https://i.ibb.co/DgCfDcw/9e0a3b0c-0bda-4937-96d0-4fdd25c671ba.jpg");
+  background-size:cover;
+   background-position: 70% 0%;
+  height:400px;
+  width:100%;
+   transform: scaleX(-1);
+}
+.about-text{
+  color: #fff;
+  font-size: 20px;
+  background: black;
+  padding:70px;
+ 
+}
+
+/*-------  personal-trainnig -------*/
+
+.personal-training {
+  background-image: url("https://wenghonnfitness.com/wp-content/uploads/2018/07/How-To-Become-A-Personal-Trainer-In-Malaysia-Without-Any-Fitness-Background..jpg");
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+
+}
+.personal-training .content{
+  float:right;
+ width:400px;
+  color: #000;
+  background-color: #fff;
+  padding: 30px;
+  margin:20px;
+}
+.personal-training .content p{
+  font-size: 20px;
+}
+.personal-training .content button{
+  color:#fff;
+  background-color:#000;
+  margin:10px 0px;
+  padding:10px 20px;
+}
+.personal-training .content button:hover{
+  background-color:var(--green-light);
+  color:#000;
+}
+/*------  reservation section -------*/
+.booking {
+  display: flex;
+  background: #69be14;
+  padding: 10px;
+}
+.booking .training-price {
+  flex: 1;
+  text-align: center;
+
+ 
+}
+.booking .heading-price {
+  font-size: 35px;
+  padding: 10px 0px;
+  border-bottom: 2px solid #fff;
+}
+.booking .first-price_time{
+  font-size: 30px;
+  padding:10px 0px;
+  color:#fff;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.booking .price-time {
+  color: #000;
+  font-size: 20px;
+  padding: 10px;
+}
+.booking .price-time span{
+    color:#fff;
+  
+  font-size:25;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+/*------  reservation form part -------*/
+.booking .booking-form {
+  flex: 1;
+  background-color: #000;
+  margin: 20px;
+  padding: 20px;
+  color: #fff;
+  height: 430px;
+ 
+}
+
+.booking .heading-form {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.booking .form-field {
+  display: flex;
+  justify-content: space-between;
+ padding: 10px 0px;
+}
+
+.booking .form-field input,
+select {
+  width: 200px;
+  border: 10px;
+  text-align: center;
+}
+
+.booking .booking-form form button{
+
+padding: 10px 50px;
+ width: 360px;
+  color: #000;
+    background-color: #fff;
+}
+
+.booking .booking-form form button:hover {
+  background-color: var(--green-light);
+  color:#000;
+}
+
+
+/*-------- Training-schedule ----*/
+
+.Training-schedule {
+  background: url("https://vidafitness.com/wp-content/uploads/2015/04/bg-training.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+}
+.Training-schedule .text-schedule{
+ float:right;
+  color:#fff;
+   padding: 10px;
+}
+/*-------- Training schedule table----*/
+.Training-schedule .table{
+  float:left;
+  margin: 10px;
+    color:white;
+  padding: 40px;
+  width: 500px;
+  height: 400px;
+}
+.Training-schedule .text-schedule h2 {
+  padding: 20px 0px;
+  font-size: 30px;
+}
+
+.Training-schedule .text-schedule p {
+  width: 550px;
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
+.Training-schedule .text-schedule button {
+  padding: 8px 10px;
+}
+.Training-schedule .text-schedule button{
+  color:#000;
+  background:#fff;
+}
+.Training-schedule .text-schedule button:hover{
+    background: var(--green-light);
+}
+
+.Training-schedule .schedule .table{
+  width: 500px;
+  height: 300px;
+  text-align:center;
+  background:var(--green-light);
+}
+.Training-schedule .table thead th {
+  background: #7fff00;
+  padding: 0px 10px;
+  font-size: 25px;
+}
+
+.Training-schedule .table tbody td {
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+
+
+/*---- footer (footer navigation, social media and contact form) ---------*/
+
+ .footer-top_menu{
+    display: flex;
+  flex-direction:row;
+ 
+  justify-content: space-around;
+    background: #0e0d0d;
+    color: #fff;
+    padding: 10px;
+    width:100%;
+
+
+}
+/*---- footer nav list---------*/
+
+.footer-top_menu .nav-footer{
+  height: 350px;
+}
+.footer-top_menu .nav-footer .nav-list_items {
+    list-style-type: none;
+   padding: 5px 0px;
+   
+}
+.footer-top_menu .nav-footer .nav-list .nav-list_items ul {
+display:none;
+  text-align: left;
+  padding-left:20px;
+}
+
+.footer-top_menu .nav-footer .nav-list .nav-list_items:hover ul {
+  display:block;
+}
+.footer-top_menu .nav-footer nav-list .nav-list a:hover {
+  color: var(--green-light);
+  background: #1e1e1e;
+  border-left-color: var(--green-light);
+}
+.footer-top_menu .nav-footer .nav-list ul {
+  display: none;
+}
+.footer-top_menu .nav-footer .nav-list ul li a {
+  padding-left: 20px;
+}
+.footer-top_menu .nav-footer .nav-list_items a {
+    color: #fff;
+    text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-top_menu .nav-footer .nav-list_items a:hover {
+    color: #7fff00;
+  border-left: 1px solid var(--green-light);
+  padding-left:10px;
+}
+
+
+/*-----Footer Address and social-media -----*/
+.footer-top_menu .social-media{
+  height:350px;
+
+}
+.footer-top_menu .social-media h1{
+    border-bottom: 1px solid var(--green-light);
+   padding: 10px 0px;
+}
+.footer-top_menu .social-media h3{
+  font-size:20px;
+    padding: 10px 0px;
+}
+
+.fa {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 6px;
+    font-size: 20px;
+   margin: 0 9px;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-youtube 
+{
+    color: #fff;
+  border:1px solid var(--green-light);
+  border-radius: 10px;
+}
+
+/*--    Footer contact-us   ------*/
+.footer-top_menu .contact-us{
+  height: 350px;
+  width:300px;
+}
+.footer-top_menu .contact-us h1{
+  border-bottom: 1px solid var(--green-light);
+   padding: 10px 0px;
+}
+.footer-top_menu .contact-us h3{
+  font-size: 18px;
+   padding: 10px 0px;
+}
+.footer-top_menu  .contact-us .field-email input {
+      width:300px;
+    background: rgb(20, 20, 20);
+    height: 40px;
+
+}
+
+.footer-top_menu  .contact-us .field-email input[placeholder],
+.footer-top_menu  .contact-us .field-email input[type] {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+  
+
+}
+
+.footer-top_menu  .contact-us .field-Massge input {
+    height: 80px;
+    width:300px;
+    background: rgb(20, 20, 20);
+}
+
+.footer-top_menu  .contact-us .field-Massge input[placeholder],
+.footer-top_menu  .contact-us .field-Massge input[type] {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+.footer-top_menu .contact-us .btn button {
+  margin: 20px 0;
+    color: #000000;
+    padding: 5px 50px;
+    font-size: 15px;
+  width:300px;
+}
+.footer-top_menu .contact-us .btn button:hover{
+  color:#000;
+  background: var(--green-light);
+}
+
+/* copy-right */
+.copy-right{
+  padding: 10px 0;
+  background:#0e0d0d;
+  text-align:center;
+  color: #fff;
+  border-top: 2px solid var(--green-light);
+}
+
+/* ---------    @media  responsive for PC      --------------*/
+@media screen and (min-width: 40rem) {
+  header .side-nav form input[type="text"], header .side-nav .join-my_fit{
+    display:none;
+  }
+
+}
+/*------  @media  responsive for mobile and tablet ------*/
+
+
+@media screen and (max-width: 768px){
+    /*-----Header -responsive ------*/
+  header {
+   width:100%;
+     padding: 10px 40px;
+    background: black;
+  }
+  header #main .logo {
+    position: relative;
+    bottom: 8px;
+    left: 12px;
+  }
+  header #main .logo a {
+    font-size: 1.5rem;
+  }
+  header .main-nav_item form input[type="text"],
+  header .main-nav_item a {
+    display: none;
+  }
+
+  header #main .open-btn {
+    position: relative;
+    bottom: 0px;
+    left: -100px;
+    font-size: 1.3rem;
+  }
+  header #main .open-btn span {
+    height: 3px;
+    margin-bottom: 6px;
+    background-color: #fff;
+    width: 35px;
+    display: block;
+  }
+  header .side-nav .close-btn {
+  position: absolute;
+  top: 11px;
+ 
+}
+  /*------ home sction-responsive ------*/
+  .home {
+    background-image: url("https://img.freepik.com/free-photo/side-view-beautiful-muscular-woman-running-treadmill_109710-1641.jpg?size=626&ext=jpg");
+height:500px;
+    background-position: 40% 10%;
+    box-shadow: inset 60px 0px 400px 60px #000;
+  }
+  
+  .home h1,
+  .home h3 {
+    position: relative;
+    z-index: 2;
+    bottom: 0;
+    text-align:center;
+    font-size: 25px;
+    font-weight: 600;
+    width:250px;
+   
+    
+  }
+
+/*--------go down button --esponsive------*/
+  .go-down {
+   top: 320px;
+    left: 145px;
+    font-size: 40px;
+  }
+ 
+.about-me,
+  .booking,
+  .footer{
+    flex-direction: column;
+  }
+
+/*------ optimize section --esponsive--*/
+.Optimize {
+
+  flex-direction: column;
+
+  width: 100%;
+}
+.Optimize-experience-1 p
+  .Optimize-experience-2 p
+  .Optimize-experience-3 p{
+    padding:10px 0;
+     margin:0px 0;
+  }
+
+/*--------- about-me -----esponsive----*/
+.about-img{
+  background: url("https://i.ibb.co/DgCfDcw/9e0a3b0c-0bda-4937-96d0-4fdd25c671ba.jpg");
+  background-size:cover;
+   background-position: 70% 0%;
+  height:400px;
+  width:100%;
+   transform: scaleX(-1);
+
+  
+}
+.about-text{
+  color: #fff;
+  font-size: 20px;
+  background: #000;
+  padding:5px;
+ 
+}
+   /*----------  personal-training -------esponsive------*/
+  .personal-training {
+   background-image:("https://wenghonnfitness.com/wp-content/uploads/2018/07/How-To-Become-A-Personal-Trainer-In-Malaysia-Without-Any-Fitness-Background..jpg"); 
+height:500px;
+    background-position: 40% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 750px;
+
+  }
+.personal-training .content{
+  width:300px;
+}
+
+ .personal-training .content {
+   position: relative;
+    left: 0;
+    top: 450px;
+    font-size: 20px;
+     padding: 10px;
+  }
+  .personal-training .content p {
+ 
+    font-size:15px;
+  }
+ /*-------------------reservation -----esponsive---------------------*/
+  .booking .booking-content {
+    margin: 0px 11px;
+      padding: 10px;
+ 
+  
+  }
+  .booking .form-field{
+    padding: 10px 10px;
+    margin:auto;
+  }
+  .booking .form-field input,
+select {
+  width: 100px;
+  text-align: center;
+}
+
+.booking .booking-form form button{
+
+padding: 5px 30px;
+ width: 270px;
+
+}
+.booking .training-price {
+
+
+  padding: 10px;
+
+}
+.booking .heading-price {
+  font-size: 30px;
+  padding: 10px;
+
+}
+.booking .first-price_time{
+  font-size: 15px;
+
+}
+.booking .price-time {
+
+  font-size: 15px;
+  padding: 0px;
+}
+.booking .price-time span{
+   
+  font-size:30;
+ 
+}
+
+.booking .booking-form {
+
+
+  margin: 10px;
+
+}
+
+.booking .heading-form {
+  font-size: 20px;
+ 
+  padding: 20px 0px;
+}
+
+/*----Training-schedule---responsive---*/
+.Training-schedule {
+  background: url("https://vidafitness.com/wp-content/uploads/2015/04/bg-training.jpg");
+     background-position: 60% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  width:100%;
+}
+.Training-schedule .text-schedule{
+float:left;
+  color:white;
+  margin: 0;
+}
+.Training-schedule .text-schedule_btn{
+  opacity:.8;
+}
+.Training-schedule .text-schedule .text-schedule_btn{
+  margin: 0;
+  padding:0 20px;
+}
+
+.Training-schedule .text-schedule h2,
+.Training-schedule .text-schedule p
+{
+  width: 300px;
+  padding: 5px 20px;
+  font-size: 20px;
+}
+ .Training-schedule .table{
+   float: right;
+width:0px;
+   height:0px;
+margin:0px;
+
+  margin-top:20px;
+   padding:0 20px;
+
+}
+.Training-schedule .table thead tr th{
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.Training-schedule .table thead tr th,
+.Training-schedule .table tbody tr td{
+  padding: 2px 15px;
+   font-size: 15px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+/*--   footer  ----responsive---*/
+.footer-top_menu{
+   flex-direction: column;
+}
+  .footer-top_menu .nav-footer{
+    display:none;
+  }
+  .footer-top_menu .social-media{
+    padding:0;
+    margin:0 30px;
+  }
+  .footer-top_menu .contact-us{
+ 
+     padding:15px;
+    margin:0 0px;
+  }
+  }
+
+
